@@ -1,0 +1,1 @@
+Scriptname AdventurerLikeYou_HailOfThorns extends ActiveMagicEffect  
