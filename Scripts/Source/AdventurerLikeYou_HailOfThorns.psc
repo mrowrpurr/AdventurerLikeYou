@@ -2,8 +2,16 @@ scriptName AdventurerLikeYou_HailOfThorns extends ActiveMagicEffect
 
 Spell property AdventurerLikeYou_SingleArrow_Spell auto
 
+; iProjectileMaxRefCount ; World
+; fAttachedArrowAgeMax ; Seconds
+; iMaxAttachedArrows ; Actor
+
 event OnEffectStart(Actor target, Actor caster)
     ActorBase cheeckenBase = Game.GetForm(0xa91a0) as ActorBase
+
+    Game.SetGameSettingInt("iProjectileMaxRefCount", 300)
+    Game.SetGameSettingFloat("fAttachedArrowAgeMax", 120)
+    Game.SetGameSettingInt("iMaxAttachedArrows", 300)
 
     int i = 0
     while i < 50
